@@ -1,0 +1,17 @@
+[tool.poetry]
+name = "model-optimization"
+version = "0.1.0"
+description = "Model optimization demo using tflite"
+authors = ["sajan-gohil <sajangohil9@gmail.com>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.10"
+tensorflow = "^2.18.0"
+opencv-python = "^4.10.0.84"
+pillow = "^11.0.0"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
