@@ -10,7 +10,7 @@ def quantize_model(input_path, output_path):
     converter = tf.lite.TFLiteConverter.from_concrete_functions([concrete_func])
 
     # Apply Dynamic range quantization (float to int8, without requirement of representative dataset)
-    # converter.optimizations = [tf.lite.Optimize.DEFAULT]
+    converter.optimizations = [tf.lite.Optimize.DEFAULT]
     converter.target_spec.supported_ops = [
         tf.lite.OpsSet.TFLITE_BUILTINS,  # Built-in operations
         tf.lite.OpsSet.SELECT_TF_OPS     # TensorFlow Select Ops
